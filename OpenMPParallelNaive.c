@@ -53,11 +53,6 @@ int main() {
     double end_time = omp_get_wtime();
 
     printf("Time taken: %f seconds\n", end_time - start_time);
-    
-    
-    print_matrix(A);
-    print_matrix(B);
-    print_matrix(C);
 
     return 0;
 }
