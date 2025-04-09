@@ -1,35 +1,3 @@
-// test and record the time to multiply matrices of these sizes
-// 512x512 by 512x512
-Threads:  1 | Time taken: 0.286000 seconds
-Threads:  2 | Time taken: 0.162000 seconds
-Threads:  4 | Time taken: 0.092000 seconds
-Threads:  8 | Time taken: 0.058000 seconds
-Threads: 16 | Time taken: 0.069000 seconds
-// 1024x1024 by 1024x1024
-Threads:  1 | Time taken: 2.071000 seconds
-Threads:  2 | Time taken: 1.192000 seconds
-Threads:  4 | Time taken: 0.645000 seconds
-Threads:  8 | Time taken: 0.398000 seconds
-Threads: 16 | Time taken: 0.374000 seconds
-// 2048x2048 by 2048x2048
-Threads:  1 | Time taken: 14.076000 seconds
-Threads:  2 | Time taken: 8.090000 seconds
-Threads:  4 | Time taken: 4.271000 seconds
-Threads:  8 | Time taken: 2.370000 seconds
-Threads: 16 | Time taken: 2.420000 seconds
-// 4096x4096 by 4096x4096
-Threads:  1 | Time taken: 98.447000 seconds
-Threads:  2 | Time taken: 57.525000 seconds
-Threads:  4 | Time taken: 30.241000 seconds
-Threads:  8 | Time taken: 16.769000 seconds
-Threads: 16 | Time taken: 16.815000 seconds
-// 8192x8192 by 8192x8192
-Threads:  1 | Time taken: 690.490000 seconds
-Threads:  2 | Time taken: 394.514000 seconds
-Threads:  4 | Time taken: 205.234000 seconds
-Threads:  8 | Time taken: 113.333000 seconds
-Threads: 16 | Time taken: 113.789000 seconds
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>
