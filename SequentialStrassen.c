@@ -2,8 +2,8 @@
 #include <stdlib.h>
 #include <time.h>
 
-#define N 512  // Matrix size (must be a power of 2)
-#define THRESHOLD 64  // Switch to naive multiplication below this size
+#define N 8  // Matrix size (must be a power of 2)
+#define THRESHOLD 4  // Switch to naive multiplication below this size
 
 int** allocate_matrix(int n) {
     int **matrix = malloc(n * sizeof(int*));
@@ -11,6 +11,15 @@ int** allocate_matrix(int n) {
         matrix[i] = malloc(n * sizeof(int));
     }
     return matrix;
+}
+
+void print_matrix(int **matrix) {
+    for (int i = 0; i < N; i++) {
+        for (int j = 0; j < N; j++) {
+            printf("%d ", matrix[i][j]);
+        }
+        printf("\n");
+    }
 }
 
 void free_matrix(int **matrix, int n) {
@@ -167,12 +176,16 @@ int main() {
     clock_t start = clock();
     strassen(N, A, B, C);
     clock_t end = clock();
+    print_matrix(A);
+    printf("\n");
+    print_matrix(B);
+    printf("\n");
+    print_matrix(C);
     double time_taken = (double)(end - start) / CLOCKS_PER_SEC;
     printf("Time taken for matrix multiplication: %.6f seconds\n", time_taken);
 
     free_matrix(A, N);
     free_matrix(B, N);
     free_matrix(C, N);
-    
     return 0;
 }
